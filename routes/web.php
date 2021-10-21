@@ -22,6 +22,14 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
+Route::get('/db', function () {
+    try {
+        return \DB::table('MyGuests')->get();
+    } catch(\Exception $e) {
+        echo $e;
+    }
+});
+
 Route::get('/phpinfo', function () {
     //return view('welcome');
     echo phpinfo();
