@@ -14,8 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    //return view('welcome');
-    return \DB::table('MyGuests')->get();
+    return view('welcome');
 });
 
 Route::get('/welcome', function () {
