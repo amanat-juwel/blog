@@ -18,6 +18,10 @@ Route::get('/', function () {
     return \DB::table('MyGuests')->get();
 });
 
+Route::get('/welcome', function () {
+   
+});
+
 Route::get('/phpinfo', function () {
     //return view('welcome');
     echo phpinfo();
